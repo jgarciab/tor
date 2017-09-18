@@ -18,8 +18,8 @@ Steps (Ubuntu + Debian)
 
 To run the controller
 ```
-    from tor_control import TorControl
-    tc = TorControl()
+from tor_control import TorControl
+tc = TorControl()
     
 ```
 
@@ -28,7 +28,7 @@ To change identities
 tc.renew_tor()
 ```
 
-Example:
+Example [jupyter notebook here](example_tor.ipynb) :
 ```
 from tor_control import TorControl
 import requests
