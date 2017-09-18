@@ -28,8 +28,12 @@ HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 3")
 sudo service tor restart
 ```
 
+6. Optional: Create a file with the password in the directory of the scraper. If you don't do it the scraper will ask for the password every time it runs.
+```
+echo 16:xxxxxx > tor_pass.secret
+```
+
 ## Run the controller
-To run the controller (this will ask you for your hashed password the first time **and will create a file with it**):
 ```
 from tor_control import TorControl
 tc = TorControl()
