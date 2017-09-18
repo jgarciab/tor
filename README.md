@@ -41,6 +41,9 @@ To change identities:
 tc.renew_tor()
 ```
 
+You can get sites using requests and run tc.renew_tor() whenever you need a new ip. Remember to be nice.
+
+
 Example [jupyter notebook here](example_tor.ipynb):
 ```
 from tor_control import TorControl
