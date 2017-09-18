@@ -22,10 +22,8 @@ class TorControl():
             self.controller.authenticate(open('./tor_pass.secret').read())
         except:
             import getpass
-            psw = getpass.getpass("What's the password? (from /etc/tor/torrc):" )
-            with open("./tor_pass.secret","w+") as f:
-                f.write(psw)                
-            self.controller.authenticate(open('./tor_pass.secret').read())
+            psw = getpass.getpass("What's the HashedControlPassword? (from /etc/tor/torrc):" )
+            self.controller.authenticate(psw)
                
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5 , "127.0.0.1", 9050, True)
         socket.socket = socks.socksocket
