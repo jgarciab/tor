@@ -1,8 +1,7 @@
-# tor
-- Python controller for TOR, to scrape anonymously.
-- Be nice!
+## Python controller for TOR, to scrape anonymously.
+### Be nice!
 
-Steps (Ubuntu + Debian)
+## Steps (Ubuntu + Debian)
 
 1. sudo apt install tor
 2. pip install pysocks
@@ -16,7 +15,7 @@ Steps (Ubuntu + Debian)
 6. sudo service tor restart
 
 
-To run the controller
+To run the controller (this will ask you for your password the first time and will create a file with it)
 ```
 from tor_control import TorControl
 tc = TorControl()
