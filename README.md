@@ -9,8 +9,8 @@
 
 4. Run "tor --hash-password your_password_here"
 5. Edit /etc/tor/torrc, uncommenting 
-- ControlPort 9051
-- HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 4")
+⋅⋅⋅ControlPort 9051
+⋅⋅⋅HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 4")
 
 6. sudo service tor restart
 
