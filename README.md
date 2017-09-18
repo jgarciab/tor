@@ -3,31 +3,43 @@
 
 ## Steps (Ubuntu + Debian)
 
-1. sudo apt install tor
-2. pip install pysocks
-3. pip install stem
+1. Install tor
+```
+sudo apt install tor
+```
+2. Install required libraries
+```
+pip install pysocks
+pip install stem
+```
 
-4. Run "tor --hash-password your_password_here"
-5. Edit /etc/tor/torrc, uncommenting 
+3. Create hash of password
+```
+tor --hash-password your_password_here
+```
+4. Edit /etc/tor/torrc, uncommenting 
 ⋅⋅⋅ControlPort 9051
-⋅⋅⋅HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 4")
+⋅⋅⋅HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 3")
 
-6. sudo service tor restart
+5. Restart tor
+```
+sudo service tor restart
+```
 
-
-To run the controller (this will ask you for your password the first time and will create a file with it)
+## Run the controller
+To run the controller (this will ask you for your hashed password the first time **and will create a file with it**):
 ```
 from tor_control import TorControl
 tc = TorControl()
     
 ```
 
-To change identities
+To change identities:
 ```
 tc.renew_tor()
 ```
 
-Example [jupyter notebook here](example_tor.ipynb) :
+Example [jupyter notebook here](example_tor.ipynb):
 ```
 from tor_control import TorControl
 import requests
