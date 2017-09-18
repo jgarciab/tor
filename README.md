@@ -18,8 +18,10 @@ pip install stem
 tor --hash-password your_password_here
 ```
 4. Edit /etc/tor/torrc, uncommenting 
-    * ControlPort 9051
-    * HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 3")
+```
+ControlPort 9051
+HashedControlPassword 16:xXxxxx (where 16:xxxx comes from step 3")
+```
 
 5. Restart tor
 ```
